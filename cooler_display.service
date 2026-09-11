@@ -1,0 +1,24 @@
+[Unit]
+Description=Cooler Display Monitor Service
+After=multi-user.target systemd-udevd.service
+
+[Service]
+ExecStart=/opt/cooler-display/.venv/bin/python -u /opt/cooler-display/main.py
+WorkingDirectory=/opt/cooler-display
+Restart=always
+RestartSec=5
+StartLimitIntervalSec=300
+StartLimitBurst=20
+TimeoutStopSec=10
+SyslogIdentifier=cooler-display
+User=root
+
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/opt/cooler-display
+MemoryMax=100M
+
+[Install]
+WantedBy=multi-user.target
