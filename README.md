@@ -3,6 +3,7 @@
 Um serviço em Python para Linux projetado para monitorar a temperatura da CPU ou o consumo de energia (via RAPL) e exibir essas informações em tempo real em um display de Air Cooler via USB.
 
 > ⚠️ **Aviso: use por sua conta e risco.**
+> 
 > Este projeto foi testado **somente** no ambiente descrito abaixo (esta combinação específica de
 > placa-mãe, processador, sistema operacional e display USB). Ele se comunica diretamente com um
 > dispositivo USB via chamadas de baixo nível (`ctrl_transfer`), incluindo o desanexamento de
